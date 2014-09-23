@@ -173,6 +173,11 @@
 \section{Function Decomposition Level 1 - Part 1}
 
 \subsection{Road Modules}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{func_decomp_lvl_1_part2}
+\end{center}
+\end{figure}
 \begin{center}
   \begin{tabular}{| p{3cm} | p{8cm} |}
     \hline
@@ -237,6 +242,11 @@
 \end{center}
 
 \subsection{Vehicle Modules}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=14cm]{func_decomp_lvl_1_part1}
+\end{center}
+\end{figure}
 
 \begin{center}
   \begin{tabular}{| p{3cm} | p{8cm} |}
@@ -253,8 +263,8 @@
     \hline
     Module & Rectifier-Converter Module \\ \hline \hline
     Inputs & Electricity from Vehicle Capacitive Plate Module \\ \hline
-    Output & Rectified Electricity to Vehicle Battery \\ \hline
-    Functionality & Converts the electricity from the capacitive plates to a current and voltage that can be used to charge the electric vehicles battery \\ \hline
+    Output & Rectified Electricity to Vehicle Charge Controller \\ \hline
+    Functionality & Converts the electricity from the capacitive plates to a current and voltage that can be used by the charge controller. \\ \hline
   \end{tabular}
 \end{center}
 
@@ -275,6 +285,16 @@
     Inputs & Data from RFID Controller\\ \hline
     Output & Wireless signal to the Road RFID Reader \\ \hline
     Functionality & Transmits the data from the RFID Controller to the RFID Reader in the Road. \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Charge Controller \\ \hline \hline
+    Inputs & Electricity from power rectifier controller\\ \hline
+    Output & Electricity to the battery \\ \hline
+    Functionality & Charge the battery \\ \hline
   \end{tabular}
 \end{center}
 
