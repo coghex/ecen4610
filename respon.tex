@@ -170,4 +170,113 @@
 \end{center}
 \end{figure}
 
+\section{Function Decomposition Level 1 - Part 1}
+
+\subsection{Road Modules}
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Power Meter \\ \hline \hline
+    Inputs & Power from the Power Grid \\ \hline
+    Output & Electricity to the Frequency Converter and meter information to the meter controller \\ \hline
+    Functionality & Reads the amount of power going into the system from the power grid \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Frequency Converter \\ \hline \hline
+    Inputs & 120V 60Hz AC power from power meter \\ \hline
+    Output & Frequency Converted Signal to Capacitive Plates \\ \hline
+    Functionality & Changes the frequency from that of the power grid \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Capacitive Road Plates \\ \hline \hline
+    Inputs & Frequency Converted Signal, Control Algorithm \\ \hline
+    Output & Wireless Frequency Converted Signal, Metering Information \\ \hline
+    Functionality & Enables conversion from normal signal over a wire to a
+    wireless signal. There will be many of these that are turned on and off
+    by the control algorithm from the control module. Outputs its on/off state
+    to determine power usage. \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & RFID Reader \\ \hline \hline
+    Inputs & RFID Signal from RFID Tag in Vehicle \\ \hline
+    Output & Data to Control Module in Road and Metering Module \\ \hline
+    Functionality & Reads the RFID tag in the vehicle to send data to the control and metering modules \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Control Module \\ \hline \hline
+    Inputs & RFID Reader Data \\ \hline
+    Output & On/Off signal to Control the different road plates \\ \hline
+    Functionality & This controls the Capacitive Road Plates. It determines if the capacitive plates need to be turned on based on the RFID data from the RFID Reader and turns them on and off \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Metering Module \\ \hline \hline
+    Inputs & Takes in data from the Power Meter and RFID Reader \\ \hline
+    Output & Outputs data on power usage to a database \\ \hline
+    Functionality & Is used to charge users for their power usage, by determining which vehicle is being charged through RFID data and how much power is being used from the power meter. \\ \hline
+  \end{tabular}
+\end{center}
+
+\subsection{Vehicle Modules}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Vehicle Capacitive Plate Module \\ \hline \hline
+    Inputs & Wireless Power from the Road Capacitive Plates \\ \hline
+    Output & Power over a wire to the Rectifier-Converter Module \\ \hline
+    Functionality & Receives power capacitively from the roads Capacitive Plates Module and converts it to standard electricity over a wire \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Rectifier-Converter Module \\ \hline \hline
+    Inputs & Electricity from Vehicle Capacitive Plate Module \\ \hline
+    Output & Rectified Electricity to Vehicle Battery \\ \hline
+    Functionality & Converts the electricity from the capacitive plates to a current and voltage that can be used to charge the electric vehicles battery \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & RFID Controller \\ \hline \hline
+    Inputs & Data regarding the batteries state \\ \hline
+    Output & Control to the Active RFID Tag in the vehicle \\ \hline
+    Functionality & Sends data to the RFID Tag in the vehicle. This data determines if the vehicle needs power from the Road. \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{| p{3cm} | p{8cm} |}
+    \hline
+    Module & Vehicle RFID Tag \\ \hline \hline
+    Inputs & Data from RFID Controller\\ \hline
+    Output & Wireless signal to the Road RFID Reader \\ \hline
+    Functionality & Transmits the data from the RFID Controller to the RFID Reader in the Road. \\ \hline
+  \end{tabular}
+\end{center}
+
+
 \end{document}
