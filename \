@@ -118,56 +118,16 @@
 \newpage
 \answertwo
 
-\section{Function Decomposition Level 0 - Part 1}
 \begin{center}
-  \begin{tabular}{ | p{3cm} | p{8cm} |}
+  \begin{tabular}{ | p{3cm} | p{5cm} |}
     \hline
-    Module & Onboard Vehicle Power System \\ \hline \hline
-    Inputs & Wireless energy from chargin pads \\
-     & Battery Voltage Levels \\ \hline
-    Outputs & RFID Signal \\
-     & DC power to battery \\ \hline
-    Functionality & Take in a battery voltage level to determine if the
-    battery needs to acquire power from the road.  Based on this information,
-    differenct codes will be transmitted by the vehicle RFID tag in order to
-    request power when needed. The onboard system the recieves power transmitted
-    by the charge pads in the road power system and outputs the received energy
-    in order to charge the vehicle battery. \\
+    Module & Onboard Vehicle \\ \hline \hline
+    Inputs & Power \\
+    Outputs & asdf \\
+    Functionality & adsf \\
     \hline
     \end{tabular}
 \end{center}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=14cm]{func_decomp_lvl_0}
-\end{center}
-\end{figure}
-
-\section{Functional Decomposition Level 0 - Part 2}
-\begin{center}
-  \begin{tabular}{ | p{3cm} | p{8cm} |}
-    \hline
-    Module & Road Surface Power System \\ \hline \hline
-    Inputs & RFID signal \\
-     & 120V/60Hz Electrical Power \\ \hline
-    Outputs & ISM-Band Wireless Power \\
-     & Power Metering Information \\ \hline
-    Functionality & The road surface power system is powered by mains
-    power from the electrical grid.  An RFID reader and control
-    subsystem determines if power should be transmitted, based on the
-    input RFID signal.  Based on RFID readings the proper road-surface level
-    charge pads are place in power transmit mode and output wireless power in an
-    ISM band.  The road system also meters power used by each vehicle and
-    stores it in a database to be accesed on the web by users or power companies\\
-    \hline
-    \end{tabular}
-\end{center}
-
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=14cm]{func_decomp_lvl_0_part2}
-\end{center}
-\end{figure}
 
 \end{document}
